@@ -24,10 +24,12 @@ export class ForecastPageComponent implements OnInit{
   city!:string;
   codeCountry!:string;
   locationCity!:string;
-
+  forecastdate:any[]=[];
   dayforecast:any[]=[];
 
   currentdate=this.date.format('DD/MM/YYYY');
+  
+
   day=this.date.format('dddd');
 
    constructor (private location:LocationService,
@@ -39,6 +41,7 @@ export class ForecastPageComponent implements OnInit{
 
    ngOnInit(): void {
     this.getLocation();
+    
    }
 
 
@@ -66,10 +69,14 @@ export class ForecastPageComponent implements OnInit{
   getforecastweather(latitude:number,longitude:number){
     this.forecastweather.getForecastWeather(latitude,longitude).subscribe((data:any)=>{
       for(let i=0;i<data.cnt;i++){
+        this.forecastdate.push(this.date.add(1,'days').format('DD/MM/YYYY'));
         this.dayforecast.push(data.list[i]);
+       
+       
+
       }
     });
-    console.log(this.dayforecast);
+    console.log(this.forecastdate);
   }
 
 }

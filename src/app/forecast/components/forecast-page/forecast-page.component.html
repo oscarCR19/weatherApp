@@ -2,9 +2,9 @@
   
     <div class="weather-side" *ngFor="let day of dayforecast;let i = index">
      
-      <div class="weather-gradient"></div>
-      <div class="date-container">
-        <h2 class="date-dayname"></h2><span class="date-day">{{day.dt_txt}}</span><i class="location-icon" data-feather="map-pin"></i><span class="location">{{city}}, {{codeCountry}}</span>
+      <div class="weather-gradient" ></div>
+      <div class="date-container" >
+        <h2 class="date-dayname"  ></h2><span class="date-day"></span><i class="location-icon" data-feather="map-pin"></i><span class="location">{{city}}, {{codeCountry}}</span>
       </div>
       <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
         <h1 class="weather-temp">{{day.main.temp}}</h1>
@@ -15,7 +15,7 @@
       
     </div>
 
-    
+    <button [routerLink]="['/homepage']">Ir a principal</button>
    
   </div>
   
