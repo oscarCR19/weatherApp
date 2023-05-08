@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { HomepageRoutingModule } from './homepage-routing.module';
 import { HomepageComponent } from './components/homepage/homepage.component';
 
@@ -11,7 +11,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
   ],
   imports: [
     CommonModule,
-    HomepageRoutingModule
+    HomepageRoutingModule,
+    FormsModule
   ]
 })
 export class HomepageModule { }

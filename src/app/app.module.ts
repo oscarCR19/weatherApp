@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { HttpClientModule } from '@angular/common/http';
 //módulos
 import { ForecastModule } from './forecast/forecast.module';
 import { HomepageModule } from './homepage/homepage.module';
@@ -17,7 +17,8 @@ import { HomepageModule } from './homepage/homepage.module';
     BrowserModule,
     AppRoutingModule,
     ForecastModule,
-    HomepageModule
+    HomepageModule,
+    HttpClientModule
 
   ],
   providers: [],

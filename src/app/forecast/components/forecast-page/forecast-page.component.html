@@ -1,1 +1,21 @@
-<p>forecast-page works!</p>
+<div class="container">
+  
+    <div class="weather-side" *ngFor="let day of dayforecast;let i = index">
+     
+      <div class="weather-gradient"></div>
+      <div class="date-container">
+        <h2 class="date-dayname"></h2><span class="date-day">{{day.dt_txt}}</span><i class="location-icon" data-feather="map-pin"></i><span class="location">{{city}}, {{codeCountry}}</span>
+      </div>
+      <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+        <h1 class="weather-temp">{{day.main.temp}}</h1>
+        <h3 class="weather-desc">Humedad; {{day.main.humidity}}%</h3>
+        <h3 class="weather-desc">{{day.weather[0].description}}</h3>
+      </div>
+      
+      
+    </div>
+
+    
+   
+  </div>
+  

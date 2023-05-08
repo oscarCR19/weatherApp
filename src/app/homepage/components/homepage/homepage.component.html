@@ -1,8 +1,37 @@
-<div class="weather">
-    <h2>Current Weather</h2>
-    <div class="weather-container">
-      <div class="temperature">75&deg;F</div>
-      <div class="description">Sunny</div>
-      <img src="https://www.example.com/sunny.png" alt="Sunny">
+<div class="container">
+  
+  <div class="weather-side">
+   
+    <div class="weather-gradient"></div>
+    <div class="date-container">
+      <h2 class="date-dayname">{{day}}</h2><span class="date-day">{{currentdate}}</span><i class="location-icon" data-feather="map-pin"></i><span class="location">{{city}}, {{codeCountry}}</span>
+    </div>
+    <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+      <h1 class="weather-temp">{{currentTemp}}°{{typeTemp}}</h1>
+      <h3 class="weather-desc">{{description}}</h3>
+    </div>
+    <div class="weather-button"><i class="weather-icon" data-feather="sun"></i>
+      <button class="btn btn" (click)="changeTemp()">{{buttonName}}</button>
+    </div>
+    
+  </div>
+  <div class="info-side">
+    <div class="today-info-container">
+      <div class="today-info">
+        <div class="precipitation"> <span class="title">Presión: </span><span class="value"> {{pressure}}</span>
+          <div class="clear"></div>
+        </div>
+        <div class="humidity"> <span class="title">Humedad: </span><span class="value"> {{humidity}}%</span>
+          <div class="clear"></div>
+        </div>
+        <div class="wind"> <span class="title">Viento: </span><span class="value"> {{windSpeed}}km/h</span>
+          <div class="clear"></div>
+        </div>
+        <div class="location"> <span class="title">Localidad: </span><span class="value"> {{locationCity}}</span>
+          <div class="clear"></div>
+        </div>
+        
+      </div>
     </div>
   </div>
+</div>
